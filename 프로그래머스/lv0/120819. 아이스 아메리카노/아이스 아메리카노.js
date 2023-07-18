@@ -1,5 +1,7 @@
 function solution(money) {
     var answer = [];
     let ice=5500;
-    return answer=[~~(money/ice),money%ice];
+    answer.push(~~(money/ice));
+    answer.push(money%ice);
+    return answer;
 }
