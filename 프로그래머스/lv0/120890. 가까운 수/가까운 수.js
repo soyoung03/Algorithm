@@ -1,7 +1,10 @@
 function solution(array, n) {
-    return array.sort((a, b) => {
-        const A = Math.abs(a - n);
-        const B = Math.abs(b - n);
-        return A - B || a - b;
-    })[0]; 
+    let answer = [];
+     array.sort((a, b) => a-b);
+
+    for (let i = 0; i < array.length; i++) {
+        answer.push(Math.abs(n-array[i]))
+        a = Math.min(...answer);
+        b = answer.indexOf(a)
+    } return array[b]
 }
